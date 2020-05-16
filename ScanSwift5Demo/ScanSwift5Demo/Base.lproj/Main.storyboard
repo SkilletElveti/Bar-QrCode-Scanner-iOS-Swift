@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16092.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d7P-Ir-n6z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16082.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan View Controller-->
+        <scene sceneID="1sa-az-P2X">
+            <objects>
+                <viewController storyboardIdentifier="ScanViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d7P-Ir-n6z" customClass="ScanViewController" customModule="ScanSwift5Demo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7SY-J0-yBc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanSCreen" translatesAutoresizingMaskIntoConstraints="NO" id="yK1-AX-lfY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPu-FF-WkB" customClass="CANCEL">
+                                <rect key="frame" x="40" y="778" width="334" height="45"/>
+                                <color key="backgroundColor" red="0.5450980392" green="0.77647058820000003" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Hqh-iU-NBT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <state key="normal" title="CANCEL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BPu-FF-WkB" firstAttribute="centerX" secondItem="7SY-J0-yBc" secondAttribute="centerX" id="1Pt-eB-PjI"/>
+                            <constraint firstItem="BPu-FF-WkB" firstAttribute="leading" secondItem="Umx-Zx-ggG" secondAttribute="leading" constant="40" id="4iA-r7-A3D"/>
+                            <constraint firstItem="yK1-AX-lfY" firstAttribute="top" secondItem="7SY-J0-yBc" secondAttribute="top" id="4ke-hv-WbN"/>
+                            <constraint firstItem="Umx-Zx-ggG" firstAttribute="bottom" secondItem="BPu-FF-WkB" secondAttribute="bottom" constant="39" id="Gsl-C4-S4a"/>
+                            <constraint firstItem="Umx-Zx-ggG" firstAttribute="trailing" secondItem="yK1-AX-lfY" secondAttribute="trailing" id="Qt9-v4-ani"/>
+                            <constraint firstItem="yK1-AX-lfY" firstAttribute="leading" secondItem="Umx-Zx-ggG" secondAttribute="leading" id="ak2-XG-yrJ"/>
+                            <constraint firstAttribute="bottom" secondItem="yK1-AX-lfY" secondAttribute="bottom" id="fsd-nB-f7Y"/>
+                            <constraint firstItem="Umx-Zx-ggG" firstAttribute="trailing" secondItem="BPu-FF-WkB" secondAttribute="trailing" constant="40" id="gDH-Bw-9TC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Umx-Zx-ggG"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="BPu-FF-WkB" id="onT-4Q-ccJ"/>
+                        <outlet property="grView" destination="yK1-AX-lfY" id="TBX-e3-rUD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6A-r4-mVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4307" y="1111"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="scanSCreen" width="414" height="736"/>
+    </resources>
+</document>
